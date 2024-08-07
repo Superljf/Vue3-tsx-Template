@@ -64,7 +64,10 @@ export default defineConfig({
 		preprocessorOptions: {
 			less: {
 				additionalData: `@import "${path.resolve(__dirname, 'src/public/css/variables.less')}";`,
-				javascriptEnabled: true
+				javascriptEnabled: true,
+				modifyVars: {
+					'@primary-color': '#007EC4'
+				}
 			}
 		}
 	},
@@ -78,7 +81,7 @@ export default defineConfig({
 		// 设置代理，根据我们项目实际情况配置
 		proxy: {
 			'/api': {
-				target: 'http://3d22af6c.r8.cpolar.top',
+				target: 'http://58c3c0dc.r8.cpolar.top ',
 				changeOrigin: true,
 				secure: false,
 				rewrite: path => path.replace('/api/', '')

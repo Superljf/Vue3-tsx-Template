@@ -1,5 +1,5 @@
-import { RouteRecordRaw } from 'vue-router'
-import { SimplifyBasicLayout, RouteLayout, LevelBasicLayout } from '@/layouts'
+import { RouteRecordRaw } from 'vue-router';
+import { SimplifyBasicLayout, RouteLayout, LevelBasicLayout } from '@/layouts';
 
 // 导航路由
 const Routes: Array<RouteRecordRaw> = [
@@ -27,7 +27,7 @@ const Routes: Array<RouteRecordRaw> = [
 		component: () => import(/* webpackChunkName: "404" */ '@/views/exception/404'),
 		meta: { title: '404', hidden: true }
 	}
-]
+];
 
 // 主路由
 const mainRoutes: RouteRecordRaw = {
@@ -35,15 +35,15 @@ const mainRoutes: RouteRecordRaw = {
 	redirect: '/login',
 	component: SimplifyBasicLayout,
 	children: []
-}
+};
 
 // 基础路由
 const baseRoutes: Array<RouteRecordRaw> = [
 	{
 		path: '/login',
 		name: 'login',
-		component: () => import(/* webpackChunkName: "login" */ '@/views/user/login')
+		component: () => import('@/views/user/login')
 	}
-]
+];
 
-export { mainRoutes, baseRoutes, Routes }
+export { mainRoutes, baseRoutes, Routes };

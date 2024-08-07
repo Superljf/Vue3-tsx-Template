@@ -1,29 +1,29 @@
-import axios, { AxiosRequestConfig, AxiosResponse, AxiosInstance } from 'axios'
-import { getToken } from './util'
-import { Modal } from 'ant-design-vue'
-import { Message, Notification } from '@/utils/resetMessage'
+import axios, { AxiosRequestConfig, AxiosResponse, AxiosInstance } from 'axios';
+import { getToken } from './util';
+import { Modal } from 'ant-design-vue';
+import { Message, Notification } from '@/utils/resetMessage';
 
 // .env环境变量
-const BaseUrl = import.meta.env.VITE_API_BASE_URL as string
+const BaseUrl = import.meta.env.VITE_API_BASE_URL as string;
 
 // create an axios instance
 const service: AxiosInstance = axios.create({
 	baseURL: BaseUrl, // 正式环境
 	timeout: 60 * 1000,
 	headers: {}
-})
+});
 
 /**
  * 请求拦截
  */
 service.interceptors.request.use(
 	(config: AxiosRequestConfig) => {
-		config.headers.common.Authorization = `Bearer ${getToken()}` // 请求头带上token
-		config.headers.common.token = getToken()
-		return config
+		config.headers.common.Authorization = `Bearer ${getToken()}`; // 请求头带上token
+		config.headers.common.token = getToken();
+		return config;
 	},
 	error => Promise.reject(error)
-)
+);
 
 /**
  * 响应拦截
@@ -31,31 +31,32 @@ service.interceptors.request.use(
 service.interceptors.response.use(
 	(response: AxiosResponse) => {
 		if (response.status == 201 || response.status == 200) {
-			const { code, status, msg } = response.data
+			const { code, status, msg } = response.data;
+			console.log('🚀 ~ file: fetch.ts:35 ~ status:', status);
+			console.log('🚀 ~ file: fetch.ts:35 ~ response.data:', response.data);
+			console.log('🚀 ~ file: fetch.ts:35 ~ code:', code);
 			if (code == 401) {
 				Modal.warning({
 					title: 'token出错',
 					content: 'token失效，请重新登录！',
 					onOk: () => {
-						sessionStorage.clear()
+						sessionStorage.clear();
 					}
-				})
-			} else if (code == 200 || code == 0) {
-				if (status) {
-					// 接口请求成功
-					msg && Message.success(msg) // 后台如果返回了msg，则将msg提示出来
-					return Promise.resolve(response) // 返回成功数据
-				}
+				});
+			} else if (code == 200 || code == 1) {
+				// 接口请求成功
+				// msg && Message.success(msg); // 后台如果返回了msg，则将msg提示出来
+				return Promise.resolve(response.data); // 返回成功数据
 				// 接口异常
-				msg && Message.warning(msg) // 后台如果返回了msg，则将msg提示出来
-				return Promise.reject(response) // 返回异常数据
+				// msg && Message.warning(msg); // 后台如果返回了msg，则将msg提示出来
+				// return Promise.reject(response); // 返回异常数据
 			} else {
 				// 接口异常
-				msg && Message.error(msg)
-				return Promise.reject(response)
+				msg && Message.error(msg);
+				return Promise.reject(response);
 			}
 		}
-		return response
+		return response;
 	},
 	error => {
 		if (error.response.status) {
@@ -64,40 +65,40 @@ service.interceptors.response.use(
 					Notification.error({
 						message: '温馨提示',
 						description: '服务异常，请重启服务器！'
-					})
-					break
+					});
+					break;
 				case 401:
 					Notification.error({
 						message: '温馨提示',
 						description: '服务异常，请重启服务器！'
-					})
-					break
+					});
+					break;
 				case 403:
 					Notification.error({
 						message: '温馨提示',
 						description: '服务异常，请重启服务器！'
-					})
-					break
+					});
+					break;
 				// 404请求不存在
 				case 404:
 					Notification.error({
 						message: '温馨提示',
 						description: '服务异常，请重启服务器！'
-					})
-					break
+					});
+					break;
 				default:
 					Notification.error({
 						message: '温馨提示',
 						description: '服务异常，请重启服务器！'
-					})
+					});
 			}
 		}
-		return Promise.reject(error.response)
+		return Promise.reject(error.response);
 	}
-)
+);
 
 interface Http {
-	fetch<T>(params: AxiosRequestConfig): Promise<StoreState.ResType<T>>
+	fetch<T>(params: AxiosRequestConfig): Promise<StoreState.ResType<T>>;
 }
 
 const http: Http = {
@@ -105,13 +106,13 @@ const http: Http = {
 		return new Promise((resolve, reject) => {
 			service(params)
 				.then(res => {
-					resolve(res.data)
+					resolve(res.data);
 				})
 				.catch(err => {
-					reject(err.data)
-				})
-		})
+					reject(err.data);
+				});
+		});
 	}
-}
+};
 
-export default http['fetch']
+export default http['fetch'];
