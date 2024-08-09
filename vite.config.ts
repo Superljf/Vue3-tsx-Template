@@ -81,7 +81,7 @@ export default defineConfig({
 		// 设置代理，根据我们项目实际情况配置
 		proxy: {
 			'/api': {
-				target: 'http://58c3c0dc.r8.cpolar.top ',
+				target: ' http://6f6cdd2b.r8.cpolar.top',
 				changeOrigin: true,
 				secure: false,
 				rewrite: path => path.replace('/api/', '')

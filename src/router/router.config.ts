@@ -43,6 +43,11 @@ const baseRoutes: Array<RouteRecordRaw> = [
 		path: '/login',
 		name: 'login',
 		component: () => import('@/views/user/login')
+	},
+	{
+		path: '/workPlace',
+		name: 'workPlace',
+		component: () => import('@/views/HomePage/index')
 	}
 ];
 

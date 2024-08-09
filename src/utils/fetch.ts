@@ -32,9 +32,6 @@ service.interceptors.response.use(
 	(response: AxiosResponse) => {
 		if (response.status == 201 || response.status == 200) {
 			const { code, status, msg } = response.data;
-			console.log('🚀 ~ file: fetch.ts:35 ~ status:', status);
-			console.log('🚀 ~ file: fetch.ts:35 ~ response.data:', response.data);
-			console.log('🚀 ~ file: fetch.ts:35 ~ code:', code);
 			if (code == 401) {
 				Modal.warning({
 					title: 'token出错',

@@ -1,0 +1,244 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e6e6ee;
+  padding: 16px 24px;
+  padding-bottom: 18px;
+  padding-right: 32px;
+}
+
+.left {}
+
+.right {
+  width: 300px;
+  text-align: right;
+}
+
+.line {
+  width: 3px;
+  height: 12px;
+  background: #007ec4;
+}
+
+.titleText {
+  font-size: 18px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: bold;
+  text-align: left;
+  color: #333333;
+  line-height: 25px;
+}
+
+.desc {
+  margin-top: 8px;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: Regular;
+  text-align: left;
+  color: #333333;
+  line-height: 20px;
+  margin-left: 8px;
+}
+
+.upBtn {
+  width: 136px;
+  height: 40px;
+  background: #007ec4;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  text-align: left;
+  color: #ffffff;
+  line-height: 22px;
+  cursor: pointer;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.txt {
+  width: 136px;
+  font-size: 12px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: Regular;
+  text-align: center;
+  color: #666666;
+  line-height: 17px;
+  margin-top: 2px;
+  float: right;
+}
+
+
+.content {
+  flex: 1;
+  height: 100%;
+
+}
+
+.up_div {
+  width: 400px;
+  height: 200px;
+  border: 1px dashed #d9d9d9;
+  border-radius: 8px;
+  margin: 150px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+  }
+
+  .up_title {
+    font-size: 18px;
+    font-family: PingFang SC, PingFang SC-Medium;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+    line-height: 25px;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+
+    .up_txt {
+      font-size: 12px;
+      font-family: PingFang SC, PingFang SC-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #999999;
+      line-height: 17px;
+    }
+
+  }
+}
+
+.table {
+  padding: 24px 32px;
+
+  :global {
+    .ant-pagination {
+      float: right;
+      margin-top: 18px;
+      margin-bottom: 20px;
+      // position: fixed;
+      bottom: 20px;
+      right: 48px;
+    }
+
+    .ant-table-thead>tr>th {
+      font-size: 16px;
+      font-family: PingFang SC, PingFang SC-Semibold;
+      font-weight: bold;
+      text-align: left;
+      color: #333333;
+      line-height: 22px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background: #F1F4F6;
+    }
+
+    .ant-table-cell ::before {
+      content: none;
+    }
+
+    .ant-table-tbody>tr>td {
+
+      font-size: 16px;
+      font-family: PingFang SC, PingFang SC-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #333333;
+      line-height: 22px;
+    }
+  }
+
+  .name {
+    font-size: 16px;
+    font-family: PingFang SC, PingFang SC-Regular;
+    font-weight: Regular;
+    text-align: left;
+    color: #333333;
+    line-height: 22px;
+  }
+
+  .status_span {
+    padding: 2px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+    font-size: 14px;
+  }
+}
+
+.opeBtn {
+  font-size: 16px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: Regular;
+  text-align: left;
+  color: #007ec4;
+  line-height: 22px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+
+.upSucModal {
+  width: 360px;
+  height: 250px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.12);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .close {
+    position: absolute;
+    right: 24px;
+    top: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.file_txt {
+  font-size: 20px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+  line-height: 28px;
+  margin: 18px 0px;
+}
