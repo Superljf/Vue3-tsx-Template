@@ -1,7 +1,3 @@
-> 随着`Vue3`的普及，已经有越来越多的项目开始使用Vue3。为了快速进入开发状态，在这里向大家推荐一套`开箱即用`的企业级开发脚手架，框架使用：`Vue3` + `Vite2` + `TypeScript` + `JSX` + `Pinia(Vuex)` + `Antd`。废话不多话，直接上手开撸。
-**该脚手架根据使用状态库的不同分为两个版本Vuex版、Pinia版，下面是相关代码地址：**
-[Vuex版](https://github.com/sunshine824/vue3.0-typescript-starter/tree/master)、
-[Pinia版](https://github.com/sunshine824/vue3.0-typescript-starter/tree/pinia)
 
 ## 搭建需准备
 
@@ -714,12 +710,6 @@ router.beforeEach(
 - [Vite](https://vitejs.cn/)
 - [Antd Design Vue](https://2x.antdv.com/components/overview-cn/)
 
-## 最后
-文章暂时就写到这，后续会增加JSX语法部分，如果本文对您有什么帮助，别忘了动动手指点个赞❤️。
-本文如果有错误和不足之处，欢迎大家在评论区指出，多多提出您宝贵的意见！
-
-最后分享本脚手架地址：[github地址](https://github.com/sunshine824/vue3.0-typescript-starter/tree/master)、
-[gitee地址](https://gitee.com/sunshine824/vue3.0-typescript-starter/tree/master/)
 
 
 
