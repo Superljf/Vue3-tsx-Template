@@ -16,8 +16,8 @@ export default defineComponent({
 		const formRef = ref(null);
 
 		const formData = reactive({
-			username: isDev() ? 'topedit' : '',
-			password: isDev() ? 'Topedit123456' : ''
+			username: isDev() ? '' : '',
+			password: isDev() ? '' : ''
 		});
 
 		const rules = {
