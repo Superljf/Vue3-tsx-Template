@@ -1,13 +1,4 @@
 
-## 搭建需准备
-
-1. [Vscode](https://code.visualstudio.com/Download) : 前端人必备写码神器
-
-2. [Chrome](https://www.google.cn/chrome/index.html) ：对开发者非常友好的浏览器(程序员标配浏览器)
-
-3. [Nodejs & npm](https://nodejs.org/zh-cn/download/) ：配置本地开发环境，安装 Node 后你会发现 npm 也会一起安装下来 (V12+)
-
-> 使用npm安装依赖包时会发现非常慢，在这里推荐使用cnpm、yarn代替。
 
 ## 脚手架目录结构
 ```
