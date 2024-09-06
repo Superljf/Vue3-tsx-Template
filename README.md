@@ -683,17 +683,6 @@ router.beforeEach(
   },
 )
 ```
-## Layouts布局组件
-> 脚手架提供多种排版布局，目录结构如下：
-
-![layout.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/073048ec7d6447c2939c74c5ccf69d79~tplv-k3u1fbpfcp-watermark.image?)
-- BlankLayout.tsx: 空白布局，只做路由分发
-- RouteLayout.tsx: 主体布局，内容显示部分，包含面包屑
-- LevelBasicLayout.tsx 多级展示布局，适用于2级以上路由
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/39d23619aa004b1ea0a4da7884517398~tplv-k3u1fbpfcp-watermark.image?)
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/82e3f3a57ba04cdaabe2b4e616f7459a~tplv-k3u1fbpfcp-watermark.image?)
-- SimplifyBasicLayout.tsx 简化版多级展示布局，适用于2级以上路由
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/84f3a4f14e874488a138ca985d811f8d~tplv-k3u1fbpfcp-watermark.image?)
 
 ## 相关参考链接
 - [Pinia官网](https://pinia.vuejs.org/)
